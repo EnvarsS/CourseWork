@@ -1,0 +1,37 @@
+/* General button style */
+.button {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-text-fill: #2196F3;        /* Blue text */
+    -fx-font-size: 16px;           /* Font size */
+    -fx-font-weight: bold;         /* Bold font */
+    -fx-padding: 10px 20px;        /* Padding */  	
+    -fx-cursor: hand;             /* Cursor change to hand */
+    -fx-transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #1976D2; /* Darker blue */
+    -fx-border-color: #1565C0;     /* Darker border */
+}
+
+/* Button pressed effect */
+.button:pressed {
+    -fx-background-color: #2196F3; /* Blue background when pressed */
+    -fx-text-fill: white;          /* White text when pressed */
+    -fx-border-color: #1976D2;     /* Lighter blue border */
+}
+
+/* Optional active button state (e.g., when a button is selected) */
+.button:focused {
+    -fx-background-color: #1565C0;  /* Darker blue */
+    -fx-border-color: #0D47A1;      /* Darker border */
+    -fx-text-fill: white;
+}
+
+/* General layout of buttons */
+.button-container {
+    -fx-alignment: center;           /* Center the buttons */
+    -fx-spacing: 15px;               /* Spacing between buttons */
+    -fx-padding: 20px;               /* Padding around the button container */
+}

@@ -34,17 +34,17 @@
             <Separator layoutX="24.0" layoutY="97.0" prefHeight="0.0" prefWidth="200.0" style="-fx-background-color: #2196f3;" />
          </children>
       </Pane>
-      <Button id="loginButton" layoutX="350.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="22.0" prefWidth="145.0" stylesheets="@../../../styles/logoButton.css" text="Button">
+      <Button fx:id="loginButton" layoutX="350.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="22.0" prefWidth="145.0" stylesheets="@../../../styles/logoButton.css" text="LOGIN">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <PasswordField id="passwordField" layoutX="390.0" layoutY="200.0" prefHeight="30.0" prefWidth="190.0">
+      <PasswordField id="passwordField" fx:id="passwordField" layoutX="390.0" layoutY="200.0" prefHeight="30.0" prefWidth="190.0">
          <font>
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <TextField id="loginField" layoutX="390.0" layoutY="130.0" prefHeight="30.0" prefWidth="190.0">
+      <TextField fx:id="loginField" layoutX="390.0" layoutY="130.0" prefHeight="30.0" prefWidth="190.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -55,6 +55,11 @@
          </font>
       </Label>
       <Label layoutX="265.0" layoutY="196.0" prefHeight="35.0" prefWidth="114.0" styleClass="label-logo" stylesheets="@../../../styles/loginLabels.css" text="Password:">
+         <font>
+            <Font name="Open Sans Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label id="errorLabel" fx:id="errorLabel" layoutX="282.0" layoutY="257.0" opacity="0.0" prefHeight="35.0" prefWidth="286.0" styleClass="label-logo" stylesheets="@../../../styles/loginLabels.css" text="Something went wrong">
          <font>
             <Font name="Open Sans Bold" size="24.0" />
          </font>
