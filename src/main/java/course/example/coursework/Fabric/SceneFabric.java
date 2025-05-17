@@ -1,13 +1,11 @@
 package course.example.coursework.Fabric;
 
+import course.example.coursework.Enum.SceneType;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-import java.util.HashMap;
-
 public class SceneFabric {
-    public static Scene getScene(course.example.coursework.Enum.Scene sceneType) {
+    public static Scene getScene(SceneType sceneType) {
         try {
             return switch (sceneType) {
                 case LOGIN ->

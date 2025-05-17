@@ -3,17 +3,20 @@ package course.example.coursework.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name = "client")
 public class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int clientID;
-    @Column(name="firstname")
+    @Column(name = "firstname")
     private String firstName;
-    @Column(name="lastname")
+    @Column(name = "lastname")
     private String lastName;
-    @Column(name="tellno")
-    private String tellNo;
+    @Column(name = "telno")
+    private String telNo;
+    @Column(name = "username")
+    private String username;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<ClientCar> clientCars;
 
     public int getClientID() {
         return clientID;
@@ -39,11 +42,24 @@ public class Client {
         this.lastName = lastName;
     }
 
-    public String getTellNo() {
-        return tellNo;
+    public String getTelNo() {
+        return telNo;
     }
 
-    public void setTellNo(String tellNo) {
-        this.tellNo = tellNo;
+    public void setTelNo(String telNo) {
+        this.telNo = telNo;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public List<ClientCar> getClientCars() {
+        return clientCars;
+    }
+
 }

@@ -1,8 +1,9 @@
 package course.example.coursework;
 
+import course.example.coursework.Enum.SceneType;
+import course.example.coursework.Fabric.SceneFabric;
+import course.example.coursework.Services.StageService;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -13,15 +14,15 @@ public class Main  extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/course/example/coursework/login-view.fxml"));
-            Scene scene = new Scene(root);
-            primaryStage.setTitle("ENVYCorp: Car Repair");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-             primaryStage.getIcons().add(
+            Scene mainScene = SceneFabric.getScene(SceneType.LOGIN);
+            StageService.setStage(primaryStage);
+            StageService.activeStage().setScene(mainScene);
+            StageService.activeStage().setTitle("ENVYCorp: Car Repair");
+            StageService.activeStage().setResizable(false);
+             StageService.activeStage().getIcons().add(
                      new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/companyLogo.png")))
         );
-            primaryStage.show();
+            StageService.activeStage().show();
         } catch (Exception e) {
             e.printStackTrace();
         }

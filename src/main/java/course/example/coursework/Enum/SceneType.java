@@ -1,6 +1,6 @@
 package course.example.coursework.Enum;
 
-public enum Scene {
+public enum SceneType {
     LOGIN,
     CLIENT,
     MECHANIC,
