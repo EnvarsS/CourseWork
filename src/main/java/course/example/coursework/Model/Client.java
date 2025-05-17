@@ -1,7 +1,7 @@
 package course.example.coursework.Model;
 
 import jakarta.persistence.*;
-
+import java.util.*;
 @Entity
 @Table(name = "client")
 public class Client {
