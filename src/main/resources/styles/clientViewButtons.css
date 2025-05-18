@@ -1,37 +1,150 @@
-/* General button style */
 .button {
-    -fx-background-color: #ffffff; /* White background */
-    -fx-text-fill: #2196F3;        /* Blue text */
-    -fx-font-size: 16px;           /* Font size */
-    -fx-font-weight: bold;         /* Bold font */
-    -fx-padding: 10px 20px;        /* Padding */  	
-    -fx-cursor: hand;             /* Cursor change to hand */
-    -fx-transition: all 0.3s ease; /* Smooth transition */
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #2196F3;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
 }
 
-/* Button hover effect */
 .button:hover {
-    -fx-background-color: #1976D2; /* Darker blue */
-    -fx-border-color: #1565C0;     /* Darker border */
+    -fx-background-color: #E3F2FD;
+    -fx-border-color: #2196F3;
 }
 
-/* Button pressed effect */
 .button:pressed {
-    -fx-background-color: #2196F3; /* Blue background when pressed */
-    -fx-text-fill: white;          /* White text when pressed */
-    -fx-border-color: #1976D2;     /* Lighter blue border */
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-border-color: #1976D2;
 }
 
-/* Optional active button state (e.g., when a button is selected) */
+.button-selected {
+    -fx-background-color: #1976D2 !important;
+    -fx-text-fill: white !important;
+    -fx-border-color: #1565C0 !important;
+}
+
 .button:focused {
-    -fx-background-color: #1565C0;  /* Darker blue */
-    -fx-border-color: #0D47A1;      /* Darker border */
+    -fx-background-color: #1565C0;
+    -fx-border-color: #0D47A1;
     -fx-text-fill: white;
 }
 
-/* General layout of buttons */
-.button-container {
-    -fx-alignment: center;           /* Center the buttons */
-    -fx-spacing: 15px;               /* Spacing between buttons */
-    -fx-padding: 20px;               /* Padding around the button container */
+/* Content container styles */
+.content-container {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+/* Title styles */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1976D2;
+    -fx-padding: 0 0 20 0;
+}
+
+/* Info grid styles */
+.info-grid {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 20px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0);
+}
+
+.info-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+.info-value {
+    -fx-font-size: 16px;
+    -fx-text-fill: #616161;
+    -fx-padding: 5px 10px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 4px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+.cars-table, .repairs-table {
+    -fx-background-color: #ffffff;
+    -fx-table-cell-border-color: #e0e0e0;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 0);
+}
+
+.cars-table .column-header, .repairs-table .column-header {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.cars-table .table-row-cell:selected, .repairs-table .table-row-cell:selected {
+    -fx-background-color: #E3F2FD;
+    -fx-text-fill: #1976D2;
+}
+
+.cars-table .table-row-cell:hover, .repairs-table .table-row-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+.cars-table .table-cell, .repairs-table .table-cell {
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+/* Details section styles */
+.details-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1976D2;
+    -fx-padding: 10 0 5 0;
+}
+
+.details-area {
+    -fx-background-color: #f8f9fa;
+    -fx-control-inner-background: #f8f9fa;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #424242;
+    -fx-background-radius: 6px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+}
+
+/* Error and empty state styles */
+.error-label, .empty-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-padding: 40px;
+}
+.error-label {
+    -fx-text-fill: #f44336;
+}
+
+.empty-label {
+    -fx-text-fill: #757575;
+}
+
+/* ScrollPane styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .content {
+    -fx-background-color: transparent;
 }

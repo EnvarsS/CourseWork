@@ -2,6 +2,13 @@ package course.example.coursework.Model;
 
 import jakarta.persistence.*;
 import java.util.*;
+
+@NamedNativeQueries(
+            @NamedNativeQuery(name = "getCurrentClient",
+            query = "SELECT * FROM client",
+            resultClass = Client.class)
+    )
+
 @Entity
 @Table(name = "client")
 public class Client {
@@ -61,5 +68,4 @@ public class Client {
     public List<ClientCar> getClientCars() {
         return clientCars;
     }
-
 }

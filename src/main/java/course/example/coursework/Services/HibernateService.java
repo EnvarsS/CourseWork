@@ -15,8 +15,8 @@ public class HibernateService {
         try {
             InputStream input = HibernateService.class.getClassLoader().getResourceAsStream("hibernate.properties");
             props.load(input);
-            props.setProperty("hibernate.connection.username", login);
-            props.setProperty("hibernate.connection.password", password);
+            props.setProperty("hibernate.connection.username", "ann_koval"/*login*/);
+            props.setProperty("hibernate.connection.password", "ann_koval1928"/*password*/);
         }
         catch (Exception e) {
             e.printStackTrace();
