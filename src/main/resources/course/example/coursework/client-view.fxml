@@ -10,40 +10,54 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.example.coursework.Controllers.ClientController">
-   <left>
-      <AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #1E88E5;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="250.0" fitWidth="300.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/companyLogo.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="77.0" layoutY="90.0" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="ENVYCorp" />
-            <Separator layoutX="50.0" layoutY="150.0" prefHeight="0.0" prefWidth="200.0" style="-fx-background-color: #2196f3;" />
-            <Button fx:id="clientInfoButton" layoutY="400.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="Personal Info">
-               <stylesheets>
-                  <URL value="@../../../styles/clientViewButtons.css" />
-               </stylesheets>
-            </Button>
-            <Button fx:id="carInfoButton" layoutY="470.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="Cars Info">
-               <stylesheets>
-                  <URL value="@../../../styles/clientViewButtons.css" />
-               </stylesheets>
-            </Button>
-            <Button fx:id="repairsInfoButton" layoutY="540.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" text="Repairs Status">
-               <stylesheets>
-                  <URL value="@../../../styles/clientViewButtons.css" />
-               </stylesheets>
-            </Button>
-         </children>
-      </AnchorPane>
-   </left>
-   <center>
-      <ScrollPane fx:id="centerScrollPane" fitToWidth="true" prefHeight="594.0" prefWidth="625.0" BorderPane.alignment="CENTER">
-         <stylesheets>
-            <URL value="@../../../styles/clientViewButtons.css" />
-         </stylesheets>
-      </ScrollPane>
-   </center>
+<BorderPane id="userGlobalBorderPane" fx:id="userGlobalBorderPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="course.example.coursework.Controllers.ClientController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #1E88E5;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="250.0" fitWidth="300.0" layoutX="25.0" layoutY="150.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/companyLogo.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="77.0" layoutY="90.0"
+                       style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="ENVYCorp"/>
+                <Separator layoutX="50.0" layoutY="150.0" prefHeight="0.0" prefWidth="200.0"
+                           style="-fx-background-color: #2196f3;"/>
+                <Button fx:id="clientInfoButton" layoutY="400.0" mnemonicParsing="false"
+                        onAction="#clientInfoButtonClicked" prefHeight="50.0" prefWidth="300.0" text="Personal Info">
+                    <stylesheets>
+                        <URL value="@../../../styles/clientViewButtons.css"/>
+                    </stylesheets>
+                </Button>
+                <Button fx:id="carInfoButton" layoutY="470.0" mnemonicParsing="false" onAction="#carInfoButtonClicked"
+                        prefHeight="50.0" prefWidth="300.0" text="Cars Info">
+                    <stylesheets>
+                        <URL value="@../../../styles/clientViewButtons.css"/>
+                    </stylesheets>
+                </Button>
+                <Button fx:id="repairsInfoButton" layoutY="540.0" mnemonicParsing="false"
+                        onAction="#repairsInfoButtonClicked" prefHeight="50.0" prefWidth="300.0" text="Repairs Status">
+                    <stylesheets>
+                        <URL value="@../../../styles/clientViewButtons.css"/>
+                    </stylesheets>
+                </Button>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <ScrollPane fx:id="centerScrollPane" fitToWidth="true" prefHeight="594.0" prefWidth="625.0"
+                    BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane fx:id="userDetailsPane" prefHeight="595.0" prefWidth="625.0">
+                    <children>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </center>
 </BorderPane>

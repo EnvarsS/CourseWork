@@ -1,0 +1,35 @@
+#carInfoHeaderAnchorPane {
+    -fx-background-color: #1E88E5;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-color: #1E88E5;
+    -fx-border-width: 2px;
+    -fx-padding: 5;
+}
+
+#CarInfoHeaderLabel {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+#personalCarsInfoVBox {
+    -fx-background-color: #1E88E5;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 2, 2);
+}
+
+#PersonalCarsInfoLabel {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+#carNameLabel {
+    -fx-font-size: 30px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}

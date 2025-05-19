@@ -8,28 +8,37 @@ public class ClientCar {
     @Id
     @Column(name = "serialnum")
     private String serialNum;
-    @ManyToOne
-    @JoinColumn(name = "clientID")
-    private Client client;
-    @ManyToOne
-    @JoinColumn(name = "markID")
-    private Mark mark;
+    @Column(name = "markid")
+    private Integer markID;
+    @Column(name = "clientid")
+    private Integer clientID;
     @Column(name = "carmanyear")
     private int carManYear;
+
+    public ClientCar() {
+
+    }
 
     public String getSerialNum() {
         return serialNum;
     }
 
-    public Client getClient() {
-        return client;
+    public Integer getClientID() {
+        return clientID;
     }
 
-    public Mark getMark() {
-        return mark;
+    public Integer getMarkID() {
+        return markID;
     }
 
     public int getCarManYear() {
         return carManYear;
+    }
+
+    public ClientCar(String serialNum, Integer clientID, Integer markID, int carManYear) {
+        this.serialNum = serialNum;
+        this.clientID = clientID;
+        this.markID = markID;
+        this.carManYear = carManYear;
     }
 }

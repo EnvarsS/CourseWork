@@ -1,7 +1,7 @@
 package course.example.coursework.Model;
 
 import jakarta.persistence.*;
-import java.util.List;
+
 @Entity
 @Table(name = "mark")
 public class Mark {
@@ -10,11 +10,12 @@ public class Mark {
     private int markID;
     @Column(name = "name")
     private String name;
-    @ManyToOne
-    @JoinColumn(name = "manufacturerid")
-    private Manufacturer manufacturer;
-    @OneToMany(mappedBy = "mark", fetch = FetchType.LAZY)
-    private List<ClientCar> clientCars;
+    @Column(name = "manufacturerid")
+    private int manufacturerID;
+
+    public Mark() {
+
+    }
 
     public int getMarkID() {
         return markID;
@@ -24,11 +25,13 @@ public class Mark {
         return name;
     }
 
-    public Manufacturer getManufacturer() {
-        return manufacturer;
+    public int getManufacturerID() {
+        return manufacturerID;
     }
 
-    public List<ClientCar> getClientCars() {
-        return clientCars;
+    public Mark(int markID, String name, int manufacturerID) {
+        this.markID = markID;
+        this.name = name;
+        this.manufacturerID = manufacturerID;
     }
 }

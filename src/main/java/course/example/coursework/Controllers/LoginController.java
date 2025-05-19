@@ -1,8 +1,8 @@
 package course.example.coursework.Controllers;
 
 import course.example.coursework.Fabric.SceneFabric;
-import course.example.coursework.Services.HibernateService;
-import course.example.coursework.Services.LoginService;
+import course.example.coursework.Services.GeneralServices.HibernateService;
+import course.example.coursework.Services.GeneralServices.LoginService;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

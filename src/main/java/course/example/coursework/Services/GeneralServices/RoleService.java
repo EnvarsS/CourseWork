@@ -1,4 +1,4 @@
-package course.example.coursework.Services;
+package course.example.coursework.Services.GeneralServices;
 
 import org.hibernate.Session;
 import org.hibernate.query.NativeQuery;

@@ -32,7 +32,6 @@ public class Repair {
     @Column(name = "repairsum")
     private Double repairSum;
 
-    // Getters
     public int getRepairNo() {
         return repairNo;
     }
@@ -61,32 +60,4 @@ public class Repair {
         return repairSum;
     }
 
-    // Setters
-    public void setRepairNo(int repairNo) {
-        this.repairNo = repairNo;
-    }
-
-    public void setDepartmentID(int departmentID) {
-        this.departmentID = departmentID;
-    }
-
-    public void setCarSerialNum(String carSerialNum) {
-        this.carSerialNum = carSerialNum;
-    }
-
-    public void setRepairDate(Date repairDate) {
-        this.repairDate = repairDate;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public void setRepairSum(Double repairSum) {
-        this.repairSum = repairSum;
-    }
 }

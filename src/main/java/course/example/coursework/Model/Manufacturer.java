@@ -9,15 +9,23 @@ public class Manufacturer {
     @Id
     @Column(name = "manufacturerid")
     private int manufacturerID;
+    @Column(name = "name")
+    private String name;
 
-    @OneToMany(mappedBy = "manufacturer", fetch = FetchType.LAZY)
-    private List<Mark> marks;
+    public Manufacturer() {
+
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public int getManufacturerID() {
         return manufacturerID;
     }
 
-    public List<Mark> getMarks() {
-        return marks;
+    public Manufacturer(int manufacturerID, String name) {
+        this.manufacturerID = manufacturerID;
+        this.name = name;
     }
 }

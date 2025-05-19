@@ -1,8 +1,6 @@
-package course.example.coursework.Services;
+package course.example.coursework.Services.GeneralServices;
 
 import course.example.coursework.Enum.SceneType;
-
-import java.sql.ResultSet;
 
 public class LoginService {
     public static SceneType getUserRoleGroup(){

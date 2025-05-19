@@ -1,0 +1,36 @@
+#personalInfoVBox {
+    -fx-background-color: #1E88E5;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 2, 2);
+}
+#PersonalInfoHeader{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+#PersonalInfoLabel {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+#personalCarsVBox{
+    -fx-background-color: #1E88E5;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 2, 2);
+}
+#PersonalCarsLabel {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+#PersonalCarsHeader{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}

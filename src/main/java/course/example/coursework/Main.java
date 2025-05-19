@@ -2,7 +2,7 @@ package course.example.coursework;
 
 import course.example.coursework.Enum.SceneType;
 import course.example.coursework.Fabric.SceneFabric;
-import course.example.coursework.Services.StageService;
+import course.example.coursework.Services.GeneralServices.StageService;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
